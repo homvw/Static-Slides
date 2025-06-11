@@ -1,0 +1,119 @@
+body {
+    background-color: #f6f6f6; 
+    font-size: 28px; 
+    font-family: 'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;
+    line-height: 1.5em;
+    overflow: hidden;
+}
+
+a { text-decoration: 
+    underline dotted 1.5px; 
+    color: #3658ff;
+  } 
+  
+a:hover { 
+    background-color: rgba(90,118,253,0.5); 
+  }
+
+.def { 
+    padding-left: 1rem; border-left: 6px solid#5a76fd; 
+    background-color: rgba(90,118,253,0.2); 
+  } 
+  
+  .bsp { 
+    padding-left: 1rem; 
+    border-left: 6px solid #7a90fd; 
+    background-color: rgba(122,144,253,0.2); 
+  } 
+  
+  .satz { 
+    padding-left: 1rem; 
+    border-left: 6px solid #8ea4ff; 
+    background-color: rgba(142,164,255,0.1); 
+  } 
+
+section {
+  height: 100vh;
+  width: 50%;
+  margin-left: 25%;
+  position: absolute;
+  z-index: 0;
+  opacity: 0;
+  transition: opacity 0.5s ease-in-out;
+}
+
+header, footer {
+  position: fixed;
+  left: 0;
+  right: 0;
+  font-size: 14px;
+  z-index: 1000;
+
+  justify-content: center;
+  align-items: center;
+}
+
+
+header {
+  top: 0;
+  
+}
+
+footer {
+  bottom: 0;
+  
+}
+
+section:target {
+  z-index: 1;
+  opacity: 1;
+}
+
+section:target ~ section {
+  opacity: 0;
+  
+}
+
+.step {
+  opacity: 0;
+  transition: opacity 0.5s ease-in-out;
+}
+
+.step.visible {
+  opacity: 1;
+}
+
+#slide1 {
+
+    
+  
+}
+
+#slide2 {
+
+}
+.bar {
+  display: flex;
+  width: 100%;
+  justify-content: space-between;
+  align-items: center;
+}
+
+.bar > div {
+  flex: 1;
+}
+
+.bar .center {
+  text-align: center;
+
+}
+
+.bar .left {
+  text-align: left;
+  margin-left: 0.5em;
+}
+
+.bar .right {
+  text-align: right;
+  margin-right: 0.5em;
+}

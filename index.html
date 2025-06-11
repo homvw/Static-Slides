@@ -1,0 +1,99 @@
+<!doctype html>
+<html>
+<head>
+<meta charset="utf-8">
+<title>Demo | Hom VW</title>
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<link rel="stylesheet" href="slide.css">
+<link rel="icon" type="image/png" sizes="32x32" href="../bilder/favicon-32x32.png">
+
+<script>MathJax = { tex: { inlineMath: [ ["$", "$"], ["$", "$"], ],},};</script>
+<script id="MathJax-script" async src="https://cdn.jsdelivr.net/npm/mathjax@3/es5/tex-chtml.js"></script>
+</head>
+<body>
+
+
+<main>
+    <section id="slide1"></a>
+        <h1>Präsentationen in HTML</h1>
+        <p class="step">
+            Gliederrung
+            <ol>
+                <li class="step"><a href="#slide2">Warum?</a></li> 
+                <li class="step"><a href="#slide3">Was?</a></li> 
+                <li class="step"><a href="#slide4">Wie?</a></li> 
+            </ol>
+        </p>
+    </section>
+
+    <section id="slide2"><h2 id="Warum?">Warum?</h2>
+        <ul>
+            <li class="step">Alle Programme ähnlich zu PowerPoint sind „schwierig“</li>
+            <ul>
+                <li class="step">PowerPoint ist nicht Open Source und kostenintensiv.</li>
+                <li class="step">Open-Source-Alternativen sind für meine Anforderungen nicht ausgelegt.</li>
+            </ul>
+            <li class="step">Das Setzen von Folien mit der LaTeX-Beamer-Klasse ist mühselig.</li>
+            <li class="step">Ähnliches gilt für alle Pandoc Option ...</li>
+            <li class="step">Reveal.js und ähnliche Frameworks sind mir zu klobig.</li>
+        </ul>
+    </section>
+    <section id="slide3">
+        <h2>Was?</h2>
+        <p class="step">
+            Ziel ist es, die Werkzeuge für statische Webseiten (HTML, CSS und ein wenig JS) zu nutzen, 
+            um damit Präsentationen erstellen zu können.
+        </p>
+
+        <p class="step">
+            Vorteile: 
+        </p>
+
+        <ul>
+            <li class="step">Plain Text</li>
+            <li class="step">Software unabhängig</li>
+            <li class="step">So flexibel wie möglich</li>
+        </ul>
+    </section>
+
+    <section id="slide4">
+        <h2>Wie?</h2>
+        <ol>
+            <li class="step">Ein HTML-Dokument.</li>
+            <li class="step">Jede <tt>section</tt> entspricht einer neuen Folie.</li>
+            <li class="step">Die <tt>section</tt> Umgebungen werden bzgl. der z-Achse gestapelt, 
+                wobei nur die aktive sichtbar ist.</li>
+            <li class="step">Mittels CSS lässt sich die Präsentation frei gestalten.</li>
+            <li class="step">JS sorgt für nette Details wie</li>
+            <ul>
+                <li class="step">Pfeiltasten für die Navigation der Folien.</li>
+                <li class="step">Automatische Foliennummerierung.</li>
+            </ul>   
+        </ol>
+    </section>
+
+    <section id="slide5">
+        <h2>Quellen</h2>
+        
+        <p class="step">
+            Dieses Projekt beruht auf folgendem Artikel <a href="https://chenhuijing.com/blog/html-slides-without-frameworks/#%F0%9F%91%9F">HTML slides without frameworks, just CSS - Chen Hui Jing</a>
+        </p>
+        
+       <a style="text-align: center" class="step" href="https://github.com/homvw/Static-Slides">Zurück zum Repository</a>
+    </section>
+</main>
+
+<footer>
+  <div class="bar">
+    <div class="left"><a href="https://homvw.de/">Hom VW</a></div>
+    <div class="center">Präsentationen in HTML</div>
+    <div class="right" id="slide-info"></div>
+  </div>
+</footer>
+
+
+</body>
+</html>
+
+<script src="pfeiltasten.js"></script>
+<script src="foliencounter.js"></script>
